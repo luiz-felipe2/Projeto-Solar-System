@@ -12,6 +12,7 @@ export default class Missions extends Component {
           <Title headline="Missões" />
           {missions.map(({ name, year, country, destination }) => {
             const missoes = (<MissionCard
+              key={ name }
               name={ name }
               year={ year }
               country={ country }

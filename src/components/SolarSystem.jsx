@@ -10,7 +10,11 @@ export default class SolarSystem extends Component {
         <Title headline="Planetas" />
         {planets.map((planetas) => {
           const { name, image } = planetas;
-          const planeta = <PlanetCard planetName={ name } planetImage={ image } />;
+          const planeta = (<PlanetCard
+            key={ name }
+            planetName={ name }
+            planetImage={ image }
+          />);
           return planeta;
         })}
       </div>
